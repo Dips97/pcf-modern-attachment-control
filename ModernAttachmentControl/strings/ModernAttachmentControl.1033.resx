@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  ...
+  <data name="ModernAttachmentControl_DisplayName" xml:space="preserve">
+    <value>Modern Attachment Control</value>
+  </data>
+  <data name="ModernAttachmentControl_Description" xml:space="preserve">
+    <value>
+      A modern, configurable file attachment control for Power Apps with file type restrictions, flexible styling, and structured output.
+    </value>
+  </data>
+  ...
+</root>
