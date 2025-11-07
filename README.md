@@ -1,6 +1,7 @@
 # Modern Attachment Control
 
 ![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 ## Overview
 Modern Attachment Control is a Power Apps Component Framework (PCF) control that delivers a configurable, Fluent UI–styled file upload experience. It streamlines file validation, styling, and data output so makers can deliver polished attachment flows without custom canvas logic.
