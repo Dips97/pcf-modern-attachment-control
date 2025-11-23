@@ -12,7 +12,7 @@ A modern, highly configurable file attachment control for Power Apps Canvas Apps
 - **Multi-File Upload**: Select and upload multiple files simultaneously.
 - **Base64 Conversion**: Automatically converts files to Base64 strings, making them ready for Power Automate or Dataverse.
 - **Robust Validation**:
-  - **File Type**: Restrict uploads to specific extensions (e.g., `.pdf`, `.docx`) or MIME types.
+  - **File Type**: Restrict uploads to specific extensions (e.g., `pdf`, `docx`) or MIME types.
   - **File Size**: Set maximum file size limits (in MB).
   - **Max Files**: Limit the total number of files allowed.
 - **Modern UI**:
@@ -80,7 +80,7 @@ To deploy the control to other environments (e.g., Production), you need to pack
 
 | Property                | Type    | Description                                                            | Default          |
 | :---------------------- | :------ | :--------------------------------------------------------------------- | :--------------- |
-| **Allowed File Types**  | Text    | Comma-separated list of extensions (e.g., `.pdf,.docx`) or MIME types. | `.pdf,.docx,...` |
+| **Allowed File Types**  | Text    | Comma-separated list of extensions (e.g., `pdf,docx`) or MIME types.   | `pdf,docx,...`   |
 | **Max Files**           | Number  | Maximum number of files allowed.                                       | `10`             |
 | **Max File Size (MB)**  | Decimal | Maximum size per file in Megabytes.                                    | `10`             |
 | **Button Label**        | Text    | Text to display on the upload button.                                  | `Upload File`    |

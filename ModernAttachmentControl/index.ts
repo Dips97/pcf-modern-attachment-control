@@ -99,7 +99,7 @@ export class ModernAttachmentControl
     const props = {
       allowedFileTypes:
         context.parameters.allowedFileTypes.raw ||
-        ".pdf,.docx,.xlsx,.txt,.pptx,.csv",
+        "pdf,docx,xlsx,txt,pptx,csv",
       maxFiles: context.parameters.maxFiles.raw || 10,
       maxFileSizeMB: context.parameters.maxFileSizeMB.raw || 10,
       buttonLabel: context.parameters.buttonLabel.raw || "Upload File",

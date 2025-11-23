@@ -16,7 +16,7 @@
       <domain></domain> -->
               </external-service-usage>
               <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
-              <property name="allowedFileTypes" display-name-key="Allowed File Types" description-key="Comma separated list of allowed file extensions (e.g. .pdf,.docx)" of-type="SingleLine.Text" usage="bound" />
+              <property name="allowedFileTypes" display-name-key="Allowed File Types" description-key="Comma separated list of allowed file extensions (e.g. pdf,docx)" of-type="SingleLine.Text" usage="bound" />
               <property name="maxFiles" display-name-key="Max Files" description-key="Maximum number of files allowed." of-type="Whole.None" usage="bound" />
               <property name="maxFileSizeMB" display-name-key="Max File Size (MB)" description-key="Maximum file size allowed per file (in MB)." of-type="Decimal" usage="bound" />
               <property name="buttonLabel" display-name-key="Button Label" description-key="Text for the upload button." of-type="SingleLine.Text" usage="bound" />

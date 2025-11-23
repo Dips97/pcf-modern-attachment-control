@@ -20,8 +20,16 @@ export function stripDataUriPrefix(dataUri: string) {
 export function isFileTypeAllowed(fileName: string, fileType: string, allowedTypes: string): boolean {
   if (!allowedTypes || allowedTypes.trim() === "") return true;
 
-  const allowed = allowedTypes.split(",").map((t) => t.trim().toLowerCase());
-  if (allowed.includes("*") || allowed.includes("*.*")) return true;
+  const allowed = allowedTypes.split(",").map((t) => {
+    let type = t.trim().toLowerCase();
+    // If it's not a MIME type (no slash) and doesn't start with dot, add dot
+    if (type.indexOf('/') === -1 && type.indexOf('.') !== 0 && type !== "*") {
+        return "." + type;
+    }
+    return type;
+  });
+
+  if (allowed.includes("*") || allowed.includes(".*") || allowed.includes("*.*")) return true;
 
   const ext = "." + (fileName.split(".").pop()?.toLowerCase() || "");
   // Check extension
