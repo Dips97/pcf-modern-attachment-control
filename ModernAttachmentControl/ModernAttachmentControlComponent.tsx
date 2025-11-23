@@ -7,7 +7,7 @@ import {
   Spinner,
   SpinnerSize,
 } from "@fluentui/react";
-import { shadeColor, stripDataUriPrefix, isFileTypeAllowed } from "./utils";
+import { shadeColor, stripDataUriPrefix, isFileTypeAllowed, normalizeAcceptAttribute } from "./utils";
 
 interface ModernAttachmentControlProps {
   allowedFileTypes: string;
@@ -284,7 +284,7 @@ export const ModernAttachmentCtrl: React.FC<ModernAttachmentControlProps> = (
       <input
         ref={fileInputRef}
         type="file"
-        accept={props.allowedFileTypes}
+        accept={normalizeAcceptAttribute(props.allowedFileTypes)}
         multiple={props.maxFiles > 1}
         style={{ display: "none" }}
         onChange={handleFileChange}

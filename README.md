@@ -1,6 +1,6 @@
 # Modern Attachment Control for Power Apps
 
-![Version](https://img.shields.io/badge/version-1.2.0-blue) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Version](https://img.shields.io/badge/version-1.3.0-blue) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB) ![Power Apps](https://img.shields.io/badge/Power%20Apps-PCF-purple)
 
 ![GitHub stars](https://img.shields.io/github/stars/Dips97/pcf-modern-attachment-control?style=social) ![GitHub forks](https://img.shields.io/github/forks/Dips97/pcf-modern-attachment-control?style=social)

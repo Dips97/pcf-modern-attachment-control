@@ -17,17 +17,29 @@ export function stripDataUriPrefix(dataUri: string) {
   return parts.length > 1 ? parts[1] : dataUri;
 }
 
-export function isFileTypeAllowed(fileName: string, fileType: string, allowedTypes: string): boolean {
-  if (!allowedTypes || allowedTypes.trim() === "") return true;
+/**
+ * Normalizes a comma-separated list of file types for the HTML input accept attribute.
+ * Ensures extensions start with a dot.
+ */
+export function normalizeAcceptAttribute(allowedTypes: string): string {
+  if (!allowedTypes || allowedTypes.trim() === "") return "";
 
-  const allowed = allowedTypes.split(",").map((t) => {
-    let type = t.trim().toLowerCase();
+  return allowedTypes.split(",").map((t) => {
+    const type = t.trim().toLowerCase();
     // If it's not a MIME type (no slash) and doesn't start with dot, add dot
     if (type.indexOf('/') === -1 && type.indexOf('.') !== 0 && type !== "*") {
         return "." + type;
     }
     return type;
-  });
+  }).join(",");
+}
+
+export function isFileTypeAllowed(fileName: string, fileType: string, allowedTypes: string): boolean {
+  if (!allowedTypes || allowedTypes.trim() === "") return true;
+
+  // Use the same normalization logic
+  const normalizedTypes = normalizeAcceptAttribute(allowedTypes);
+  const allowed = normalizedTypes.split(",");
 
   if (allowed.includes("*") || allowed.includes(".*") || allowed.includes("*.*")) return true;
 
